@@ -7,7 +7,7 @@ void transpose(int arr[3][3], int m, int n)
 {
     for (int i = 0; i < m; i++)
     {
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < i; j++)
         {
             swap(arr[i][j], arr[j][i]);
         }
