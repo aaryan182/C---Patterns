@@ -1,3 +1,5 @@
+// time complexity is O(n^2)
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -20,7 +22,7 @@ int main()
         {
             cout << arr[i][endingcol] << " ";
         }
-        endingcol--;
+        endingcol--; 
 
         for (int i = endingcol; i >= startingCol; i--)
         {
