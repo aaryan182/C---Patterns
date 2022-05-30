@@ -9,7 +9,7 @@ int main()
     int n = 3;
     int total = n * n;
     int startingRow = 0, startingCol = 0, endingRow = n - 1, endingcol = n - 1;
-    n=(n+1)/2;
+    n = (n + 1) / 2;
     while (n--)
     {
         for (int i = startingCol; i <= endingcol; i++)
@@ -22,7 +22,7 @@ int main()
         {
             cout << arr[i][endingcol] << " ";
         }
-        endingcol--; 
+        endingcol--;
 
         for (int i = endingcol; i >= startingCol; i--)
         {
