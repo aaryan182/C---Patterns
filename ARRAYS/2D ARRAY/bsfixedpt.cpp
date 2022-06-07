@@ -1,7 +1,13 @@
+//  find fixed pt in the sorted array 
+// fixed pt is where value = index 
+
+// ex {-10,-5,0 , 3 ,7}
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
-int binarySearch(int arr[], int n, int target)
+int bsFixedPt(int arr[], int n, int target)
 {
     int start = 0;
     int end = n - 1;
@@ -11,11 +17,11 @@ int binarySearch(int arr[], int n, int target)
     {
 
         mid = (start + end) / 2;
-        if (arr[mid] == target)
+        if (mid == target)
         {
-            return arr[mid];
+            return mid;
         }
-        else if (target < arr[mid])
+        else if (target < mid)
         {
             end = mid - 1;
         }
@@ -29,12 +35,10 @@ int binarySearch(int arr[], int n, int target)
 
 int main()
 {
-    int arr[] = {2, 3, 4, 5, 6, 7, 8};
-    int n = 7;
-    int target = 6;
-
-    cout << binary_search(arr, arr + n, target) << endl;
-    cout << binarySearch(arr, n, target) << endl;
+    int arr[] = {-10,-5,0 ,3 ,7};
+    int n = 5;
+    int target = 3;
+    cout << bsFixedPt(arr, n, target) << endl;
 
     return 0;
 }
